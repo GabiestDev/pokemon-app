@@ -1,0 +1,22 @@
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="6" *ngFor="let pokemon of pokemons">
+        <ion-card>
+          <img [src]="pokemon.image">
+          <ion-card-header>
+            <ion-card-title>{{ pokemon.name | titlecase }}</ion-card-title>
+          </ion-card-header>
+          <ion-button (click)="viewDetails(pokemon)">Detalhes</ion-button>
+          <ion-button (click)="toggleFavorite(pokemon)" color="light">
+            <ion-icon [name]="isFavorite(pokemon.id) ? 'heart' : 'heart-outline'"></ion-icon>
+          </ion-button>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-infinite-scroll (ionInfinite)="loadMore($event)">
+    <ion-infinite-scroll-content></ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content>
