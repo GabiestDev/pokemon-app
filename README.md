@@ -1,6 +1,6 @@
 # Pokémon App
 
-Aplicativo para listar Pokémon, ver detalhes e gerenciar favoritos, construído com Angular e Ionic.
+Aplicativo para listar Pokémon, ver detalhes e gerenciar favoritos, construído com Angular, Ionic e Laravel.
 
 ## Tecnologias Utilizadas
 - Angular 17+
